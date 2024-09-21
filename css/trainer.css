@@ -1,0 +1,204 @@
+/* start general style */
+body{
+    direction: rtl;
+    font-family: 'Roboto', sans-serif;
+    overflow: auto;
+}
+:root{
+    --main-bg-color:#009d63;
+    --main-text-color:#009d63;
+    --second-text-color:#FFF;
+    --second-bg-color:#c1efde;
+}
+.primary-text {color:var(--main-text-color);}
+
+.second-text{color:var(--second-text-color);}
+
+.rounded-full{border-radius: 100%;}
+
+#wrapper{overflow-x: hidden ;}
+
+.info{
+    background: #ffffff ;
+    box-shadow: -2px 2px 70px -25px rgba(0, 0, 0, 0.8);
+    padding: 20px 20px;
+    transition: all 0.5s ease;
+    border-radius: 30px;   
+}
+/*end general style*/
+
+/*start sidebar*/
+#sidebar-wrapper{
+    min-height: 100vh;
+    margin-right:0 ;
+    transition: margin 0.3s ease-out;
+    background-color: #0298cf;
+}
+
+#sidebar-wrapper .sidebar-heading{
+    padding: 0.875rem 1.25rem ;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+#sidebar-wrapper .list-group{width: 15rem;}
+
+#page-content-wrapper{min-width: 100vw;}
+
+#wrapper.toggled #sidebar-wrapper{margin-right: -15rem;}
+
+#menu-toggle{
+    cursor: pointer;
+    background: #0298cf;
+    padding: 15px 15px;
+    border-radius: 30px;
+    color: #FFF;
+}
+
+.list-group-item{
+    border: none;
+    padding: 20px 30px;
+}
+
+.list-group-item::after{
+    content: "";
+    position: absolute;
+    background-color: purple;
+    height: 5px;
+    width: 0%;
+    right:  45px;
+    top: 50px;
+    transition: 0.3s;
+    border-radius: 30px;
+}
+
+.list-group-item:hover{color: purple;}
+
+.list-group-item:hover:after{width: 55%;}
+
+.list-group-item.active{
+    background-color: transparent;
+    color: purple;
+    font-weight: bold;
+    border: none;
+}
+/*end sidebar*/
+
+/*start sidebare responsive*/
+@media(min-width:768px){
+    #sidebar-wrapper{
+        margin-right: 0;
+    }
+    #page-content-wrapper{
+        min-width: 0;
+        width: 100%;
+    }
+    #wrapper.toggled #sidebar-wrapper{
+        margin-right: -15rem ;
+    }
+}
+/*end sidebare responsive*/
+
+/*start table*/
+.table-section {
+        
+    overflow: auto;
+    height: 700px;
+    overflow-x: hidden;
+    
+}
+.table-section table {
+   
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+table.dataTable thead>tr>th.sorting {
+    position: sticky;
+    top: 0;
+    background-color: #F6F9Fc;
+    color: #8493a5;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+th,
+td {
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 20px;
+    text-align: center;
+}
+table.dataTable.table-striped>tbody>tr.odd>*{
+    background-color: #eee;  
+}
+table.dataTable.table-striped>tbody>tr.even>*{
+    background-color: #fff;  
+}
+
+table.dataTable.table-striped>tbody>tr:hover.odd>*, 
+table.dataTable.table-striped>tbody>tr:hover.even>*{
+    cursor: pointer;
+    background-color: #8493a5;
+}
+::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {box-shadow: inset 0 0 6px  #0298cf;}
+
+::-webkit-scrollbar-thumb {box-shadow: inset 0 0 6px #0298cf;}
+div.dataTables_wrapper div.dataTables_length label{
+    position: relative;
+    right: 5%;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight:bold ;
+}
+div.dataTables_wrapper div.dataTables_filter label{
+    position: relative;
+    right: 50%;
+    font-size: 20px;
+    font-weight:bold ;
+    
+    
+}
+div.dataTables_wrapper div.dataTables_filter input{
+    margin-right: 10px ;
+}
+/*start profile modal*/
+.main-content{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.profile-card{
+    min-height: 500px;
+    height: 100%;
+}
+.banner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 125px;
+    background-image: url('../img/download.jfif');
+    background-position: center;
+    background-size: cover;
+}
+
+.img-circle{
+    height: 150px;
+    width: 150px;
+    border-radius: 150px;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.social-links a:hover{
+    transition: all 0.2s;
+    transform: translateY(-3px);
+    
+}
+/*end profile modal*/
+
